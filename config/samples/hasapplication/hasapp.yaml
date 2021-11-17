@@ -1,7 +1,7 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: HASApplication
 metadata:
-  name: hasapplication-sample
+  name: hasapplication-sample-12345
 spec:
   displayName: "petclinic"
   description: "application definition for petclinic-app"
