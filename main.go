@@ -137,7 +137,16 @@ func main() {
 		os.Exit(1)
 	}
 
+	// webhookenabled, present := os.LookupEnv("ENABLE_WEBHOOKS")
+
+	// setupLog.Info(">>>> present", present)
+	// setupLog.Info(">>>> ENABLE_WEBHOOKS", webhookenabled)
+
+	// setupLog.Info(">>>> ENABLE_WEBHOOKS_MAYSUN", "ENABLE_WEBHOOKS_MAYSUN", os.Getenv("ENABLE_WEBHOOKS_MAYSUN"))
+	setupLog.Info(">>>> ENABLE_WEBHOOKS", "ENABLE_WEBHOOKS", os.Getenv("ENABLE_WEBHOOKS"))
+
 	if os.Getenv("ENABLE_WEBHOOKS") != "false" {
+		setupLog.Info("setting up webhooks")
 		if err = (&appstudiov1alpha1.Component{}).SetupWebhookWithManager(mgr); err != nil {
 			setupLog.Error(err, "unable to create webhook", "webhook", "Component")
 			os.Exit(1)

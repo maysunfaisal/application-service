@@ -7,6 +7,6 @@ spec:
   displayName: "petclinic"
   description: "application definition for petclinic-app"
   gitOpsRepository: 
-    url: "https://github.com/johnmcollier/petclinic-gitops"
+    url: "https://github.com/johnmcollier/petclinic-gito12345ps"
   appModelRepository: 
     url: "https://github.com/johnmcollier/petclinic-app"
