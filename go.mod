@@ -17,6 +17,7 @@ require (
 	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.19.0
 	github.com/openshift/api v0.0.0-20200930075302-db52bc4ef99f
+	github.com/redhat-appstudio/managed-gitops/appstudio-shared v0.0.0-20220531160946-cc02baa57d4e
 	github.com/redhat-appstudio/service-provider-integration-scm-file-retriever v0.4.3
 	github.com/redhat-developer/alizer/go v0.0.0-20220610160520-e7064efb37bc
 	github.com/spf13/afero v1.8.0
