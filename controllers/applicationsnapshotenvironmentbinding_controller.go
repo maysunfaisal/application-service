@@ -84,6 +84,15 @@ func (r *ApplicationSnapshotEnvironmentBindingReconciler) Reconcile(ctx context.
 	snapshotName := appSnapshotEnvBinding.Spec.Snapshot
 	components := appSnapshotEnvBinding.Spec.Components
 
+	// Get the Environment CR
+	environment := appstudioshared.Environment{}
+	err = r.Get(ctx, types.NamespacedName{Name: environmentName, Namespace: appSnapshotEnvBinding.Namespace}, &environment)
+	if err != nil {
+		log.Error(err, fmt.Sprintf("unable to get the Environment %s %v", environmentName, req.NamespacedName))
+		r.SetConditionAndUpdateCR(ctx, &appSnapshotEnvBinding, err)
+		return ctrl.Result{}, err
+	}
+
 	// Get the Snapshot CR
 	appSnapshot := appstudioshared.ApplicationSnapshot{}
 	err = r.Get(ctx, types.NamespacedName{Name: snapshotName, Namespace: appSnapshotEnvBinding.Namespace}, &appSnapshot)
@@ -164,7 +173,7 @@ func (r *ApplicationSnapshotEnvironmentBindingReconciler) Reconcile(ctx context.
 			}
 		}
 
-		err = gitops.GenerateOverlaysAndPush(tempDir, clone, gitOpsRemoteURL, component, applicationName, environmentName, imageName, appSnapshotEnvBinding.Namespace, r.Executor, r.AppFS, gitOpsBranch, gitOpsContext, componentGeneratedResources)
+		err = gitops.GenerateOverlaysAndPush(tempDir, clone, gitOpsRemoteURL, component, environment, applicationName, environmentName, imageName, appSnapshotEnvBinding.Namespace, r.Executor, r.AppFS, gitOpsBranch, gitOpsContext, componentGeneratedResources)
 		if err != nil {
 			log.Error(err, fmt.Sprintf("unable to get generate gitops resources for %s %v", componentName, req.NamespacedName))
 			r.AppFS.RemoveAll(tempDir) // not worried with an err, its a best case attempt to delete the temp clone dir
