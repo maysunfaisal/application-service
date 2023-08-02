@@ -2,7 +2,7 @@ name: Code Coverage Report
 on:
   push:
     branches:
-      - main
+      - update-go-test
 jobs:
   build-and-deploy:
     runs-on: ubuntu-20.04
