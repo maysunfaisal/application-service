@@ -21,11 +21,11 @@ import (
 	"strconv"
 	"strings"
 
+	cdqanalysis "github.com/maysunfaisal/application-service/cdq-analysis/pkg"
+	github "github.com/maysunfaisal/application-service/pkg/github"
+	"github.com/maysunfaisal/application-service/pkg/metrics"
 	"github.com/prometheus/client_golang/prometheus"
 	appstudiov1alpha1 "github.com/redhat-appstudio/application-api/api/v1alpha1"
-	cdqanalysis "github.com/redhat-appstudio/application-service/cdq-analysis/pkg"
-	github "github.com/redhat-appstudio/application-service/pkg/github"
-	"github.com/redhat-appstudio/application-service/pkg/metrics"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 )

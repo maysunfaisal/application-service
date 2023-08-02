@@ -22,9 +22,9 @@ import (
 	"reflect"
 	"time"
 
+	cdqanalysis "github.com/maysunfaisal/application-service/cdq-analysis/pkg"
+	"github.com/maysunfaisal/application-service/pkg/metrics"
 	"github.com/prometheus/client_golang/prometheus"
-	cdqanalysis "github.com/redhat-appstudio/application-service/cdq-analysis/pkg"
-	"github.com/redhat-appstudio/application-service/pkg/metrics"
 
 	gofakeit "github.com/brianvoe/gofakeit/v6"
 	"github.com/go-logr/logr"
@@ -44,11 +44,11 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/source"
 	"sigs.k8s.io/yaml"
 
+	devfile "github.com/maysunfaisal/application-service/pkg/devfile"
+	github "github.com/maysunfaisal/application-service/pkg/github"
+	logutil "github.com/maysunfaisal/application-service/pkg/log"
+	util "github.com/maysunfaisal/application-service/pkg/util"
 	appstudiov1alpha1 "github.com/redhat-appstudio/application-api/api/v1alpha1"
-	devfile "github.com/redhat-appstudio/application-service/pkg/devfile"
-	github "github.com/redhat-appstudio/application-service/pkg/github"
-	logutil "github.com/redhat-appstudio/application-service/pkg/log"
-	util "github.com/redhat-appstudio/application-service/pkg/util"
 )
 
 // ApplicationReconciler reconciles a Application object

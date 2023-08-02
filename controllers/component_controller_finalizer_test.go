@@ -23,8 +23,8 @@ import (
 	. "github.com/onsi/gomega"
 	"sigs.k8s.io/yaml"
 
+	cdqanalysis "github.com/maysunfaisal/application-service/cdq-analysis/pkg"
 	appstudiov1alpha1 "github.com/redhat-appstudio/application-api/api/v1alpha1"
-	cdqanalysis "github.com/redhat-appstudio/application-service/cdq-analysis/pkg"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
 )

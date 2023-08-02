@@ -24,8 +24,8 @@ import (
 
 	"github.com/brianvoe/gofakeit/v6"
 	"github.com/google/go-github/v52/github"
-	"github.com/redhat-appstudio/application-service/pkg/metrics"
-	"github.com/redhat-appstudio/application-service/pkg/util"
+	"github.com/maysunfaisal/application-service/pkg/metrics"
+	"github.com/maysunfaisal/application-service/pkg/util"
 )
 
 const AppStudioAppDataOrg = "redhat-appstudio-appdata"

@@ -26,11 +26,11 @@ import (
 	"github.com/devfile/api/v2/pkg/attributes"
 	data "github.com/devfile/library/v2/pkg/devfile/parser/data"
 	"github.com/devfile/library/v2/pkg/devfile/parser/data/v2/common"
+	cdqanalysis "github.com/maysunfaisal/application-service/cdq-analysis/pkg"
+	devfilePkg "github.com/maysunfaisal/application-service/pkg/devfile"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	appstudiov1alpha1 "github.com/redhat-appstudio/application-api/api/v1alpha1"
-	cdqanalysis "github.com/redhat-appstudio/application-service/cdq-analysis/pkg"
-	devfilePkg "github.com/redhat-appstudio/application-service/pkg/devfile"
 	"sigs.k8s.io/yaml"
 
 	corev1 "k8s.io/api/core/v1"

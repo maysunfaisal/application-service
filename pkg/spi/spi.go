@@ -20,8 +20,8 @@ import (
 	"io"
 	"path/filepath"
 
-	cdqanalysis "github.com/redhat-appstudio/application-service/cdq-analysis/pkg"
-	"github.com/redhat-appstudio/application-service/pkg/devfile"
+	cdqanalysis "github.com/maysunfaisal/application-service/cdq-analysis/pkg"
+	"github.com/maysunfaisal/application-service/pkg/devfile"
 	"github.com/redhat-appstudio/service-provider-integration-scm-file-retriever/gitfile"
 )
 

@@ -39,12 +39,12 @@ import (
 
 	routev1 "github.com/openshift/api/route/v1"
 
+	cdqanalysis "github.com/maysunfaisal/application-service/cdq-analysis/pkg"
+	"github.com/maysunfaisal/application-service/controllers"
+	"github.com/maysunfaisal/application-service/pkg/github"
+	"github.com/maysunfaisal/application-service/pkg/spi"
+	"github.com/maysunfaisal/application-service/pkg/util/ioutils"
 	appstudiov1alpha1 "github.com/redhat-appstudio/application-api/api/v1alpha1"
-	cdqanalysis "github.com/redhat-appstudio/application-service/cdq-analysis/pkg"
-	"github.com/redhat-appstudio/application-service/controllers"
-	"github.com/redhat-appstudio/application-service/pkg/github"
-	"github.com/redhat-appstudio/application-service/pkg/spi"
-	"github.com/redhat-appstudio/application-service/pkg/util/ioutils"
 
 	// Enable pprof for profiling
 	/* #nosec G108 -- debug code */

@@ -1,4 +1,4 @@
-module github.com/redhat-appstudio/application-service
+module github.com/maysunfaisal/application-service
 
 go 1.18
 
@@ -10,6 +10,7 @@ require (
 	github.com/gofri/go-github-ratelimit v1.0.3-0.20230428184158-a500e14de53f
 	github.com/golang/mock v1.6.0
 	github.com/google/go-github/v52 v52.0.1-0.20230514113659-60429b4ba0ba
+	github.com/maysunfaisal/application-service/cdq-analysis v0.0.0
 	github.com/migueleliasweb/go-github-mock v0.0.17
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/onsi/ginkgo v1.16.5
@@ -19,7 +20,6 @@ require (
 	github.com/pact-foundation/pact-go v1.7.0
 	github.com/prometheus/client_golang v1.14.0
 	github.com/redhat-appstudio/application-api v0.0.0-20230704143842-035c661f115f
-	github.com/redhat-appstudio/application-service/cdq-analysis v0.0.0
 	github.com/redhat-appstudio/service-provider-integration-scm-file-retriever v0.8.3
 	github.com/redhat-developer/gitops-generator v0.0.0-20230801134438-01747a27dcbf
 	github.com/spf13/afero v1.8.0
@@ -176,4 +176,4 @@ require (
 
 replace github.com/antlr/antlr4 => github.com/antlr/antlr4 v0.0.0-20211106181442-e4c1a74c66bd
 
-replace github.com/redhat-appstudio/application-service/cdq-analysis => ./cdq-analysis
+replace github.com/maysunfaisal/application-service/cdq-analysis => ./cdq-analysis
